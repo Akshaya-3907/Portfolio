@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshaya S | Portfolio</title>
+
+<style>
+:root {
+    --green: #214d43;
+    --light-green: #dcefe7;
+    --background: #f3f8f5;
+    --text: #24312d;
+    --muted: #61716a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9efeb;
+    color: var(--text);
+    padding: 25px 12px;
+}
+
+.portfolio {
+    width: 210mm;
+    min-height: 297mm;
+    margin: auto;
+    padding: 14mm 17mm;
+    background: white;
+    position: relative;
+    box-shadow: 0 5px 25px #00000018;
+    overflow: hidden;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4mm;
+    background: var(--green);
+}
+
+/* Header and profile photo */
+.header {
+    background: var(--background);
+    padding: 6mm;
+    display: grid;
+    grid-template-columns: 1fr 43mm;
+    gap: 5mm;
+    align-items: center;
+}
+
+h1 {
+    color: var(--green);
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.degree {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.role {
+    color: var(--green);
+    font-weight: bold;
+    margin: 20px 0 9px;
+}
+
+.intro {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.profile-photo {
+    width: 43mm;
+    height: 57mm;
+    object-fit: cover;
+    object-position: center 18%;
+    border: 2px solid var(--light-green);
+    display: block;
+}
+
+.divider {
+    height: 2px;
+    background: var(--light-green);
+    margin: 25px 0;
+}
+
+section {
+    margin-bottom: 23px;
+}
+
+h2 {
+    color: var(--green);
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.education-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.year {
+    color: var(--green);
+    white-space: nowrap;
+}
+
+.college {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--background);
+    border: 1px solid var(--light-green);
+}
+
+.skill {
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 11px;
+    border-right: 1px solid var(--light-green);
+}
+
+.skill:last-child {
+    border-right: none;
+}
+
+/* Project */
+.project-card {
+    background: var(--background);
+    padding: 16px;
+    border-left: 3px solid var(--green);
+}
+
+.project-card h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.project-card p,
+.objective {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Contact */
+.contact {
+    background: var(--green);
+    color: white;
+    padding: 16px 20px;
+    margin-top: 25px;
+}
+
+.contact h2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.contact p {
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive screen layout */
+@media screen and (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
+    .portfolio {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 18px;
+    }
+
+    .header {
+        grid-template-columns: 1fr 100px;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 133px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill {
+        border-bottom: 1px solid var(--light-green);
+    }
+
+    .skill:nth-child(2) {
+        border-right: none;
+    }
+
+    .education-row {
+        flex-wrap: wrap;
+    }
+}
+
+/* A4 printing */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .portfolio {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 14mm 17mm;
+        box-shadow: none;
+        overflow: hidden;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="portfolio">
+
+    <div class="top-bar"></div>
+
+    <!-- HEADER WITH YOUR PHOTO -->
+    <header class="header">
+
+        <div>
+            <h1>AKSHAYA S</h1>
+
+            <p class="degree">
+                B.Tech Information Technology<br>
+                3rd Year
+            </p>
+
+            <p class="role">
+                Aspiring Software Developer
+            </p>
+
+            <p class="intro">
+                Motivated IT student interested in developing
+                practical software solutions and improving
+                technical skills through hands-on projects.
+            </p>
+        </div>
+
+        <!-- PHOTO LINE -->
+        <img
+            src="profile.jpg"
+            alt="Akshaya's profile photo"
+            class="profile-photo"
+        >
+
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>EDUCATION</h2>
+
+        <div class="education-row">
+            <strong>B.Tech — Information Technology</strong>
+            <strong class="year">3rd Year</strong>
+        </div>
+
+        <p class="college">
+            Velalar College of Engineering and Technology
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <h2>TECHNICAL SKILLS</h2>
+
+        <div class="skills">
+            <div class="skill">HTML &amp; CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python (Basics)</div>
+            <div class="skill">Problem-Solving</div>
+        </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section>
+        <h2>PROJECT</h2>
+
+        <div class="project-card">
+            <h3>Cattle Skin Disease Detection</h3>
+
+            <p>
+                A project focused on identifying possible skin
+                diseases in cattle. The project explores
+                technology-assisted detection to support
+                early awareness.
+            </p>
+        </div>
+    </section>
+
+    <!-- CAREER OBJECTIVE -->
+    <section>
+        <h2>CAREER OBJECTIVE</h2>
+
+        <p class="objective">
+            To start a career as a Software Developer,
+            contribute to meaningful software projects, and
+            continue improving programming, logical thinking,
+            and problem-solving skills.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact">
+        <h2>CONTACT</h2>
+        <p>
+            Email: akshayasugadev03@gmail.com
+        </p>
+    </div>
+
+    <footer class="footer">
+        AKSHAYA S &nbsp; • &nbsp; PORTFOLIO
+    </footer>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const photo = document.querySelector(".profile-photo");
+
+    // Show a message if the photo cannot be loaded
+    photo.addEventListener("error", function () {
+        this.alt = "Photo not found. Check profile.jpg location.";
+        this.style.background = "#dcefe7";
+    });
+
+    // Set the browser tab title
+    document.title = "Akshaya S | Software Developer Portfolio";
+
+});
+</script>
+
+</body>
+</html>
